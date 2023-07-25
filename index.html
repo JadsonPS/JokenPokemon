@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon-pokeball.png" type="image/x-icon">
+    <title>JokenPokemon</title>
+</head>
+
+<body>
+    <h1>JokenPokemon</h1>
+    <div class="container">
+
+        <!-----Bar-health----->
+        <div class="bar-life" id="hp-COM">
+            <p>COM</p>
+            <p class="machine-score">Pontuação da Alexa: <span id="machine-score">0</span></p>
+        </div>
+        <div class="bar-life" id="hp-player">
+            <p>PLAYER</p>
+            <p class="your-score">Sua pontuação: <span id="your-score">0</span></p>
+        </div>
+
+
+        <!-- COM -->
+        <div class="computer " id="COM"><img src="./img/COM.png" alt=""></div>
+
+        <!-- Player -->
+        <div class="player" id="PLAYER"><img src="./img/player.png" alt=""></div>
+
+
+        <!-- jogada dos jogadores -->
+        <div class="choice-container">
+            <!-- <div class="choice-palyer">&#x1F44A;</div> -->
+            <div class="choice-palyer">
+                <img class="hand" src="./img/tesoura.png">
+                
+            </div>
+            
+            <div class="choice-com">
+                <img class="hand" src="./img/rock.png">
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="control">
+        <div class="buttons">
+            <!-- <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+            <button id="paper" onclick="playHuman('paper')">&#x1F590;</button>
+            <button id="scissors" onclick="playHuman('scissors')">&#x270C;</button> -->
+            <button id="rock" onclick="playHuman('rock')"><img src="./img/hand-rock.png" alt=""></button>
+            <button id="paper" onclick="playHuman('paper')"><img src="./img/hand-paper.png" alt=""></button>
+            <button id="scissors" onclick="playHuman('scissors')"><img src="./img/hand-tesoura.png" alt=""></button>
+        </div>
+        <div class="result">
+            <p>resultados</p>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>

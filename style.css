@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://64.media.tumblr.com/00ec803404f6e9d6583f92d8870b5fb8/tumblr_p7k8f3fMWS1wvbydeo1_1280.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain ;
+}
+
+h1 {
+    background: linear-gradient(rgb(0, 157, 255), rgb(0, 159, 0));
+    width: 250px;
+    border: 2px solid rgb(21, 21, 21);
+    border-left-color:rgb(73, 73, 73) ;
+    border-top-color: rgb(73, 72, 72);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+/*---------------------------------
+        Container principal
+---------------------------------*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+
+
+
+.bar-life {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(242, 242, 242); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+
+
+/*-----BARRA de sangue COM-----*/
+#hp-COM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+} 
+
+
+
+/*-----BARRA de sangue PLAYER-----*/
+#hp-player {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+/*-----COM-----*/
+#COM {
+    position: absolute;
+    top: 0;
+    right: 0;
+}   
+
+#COM img{
+    width: 100px;
+    /* background-color: blue;  */
+    
+    animation: jumps 0.5s infinite alternate;
+} 
+
+@keyframes jumps {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(2px);
+    }
+
+}
+
+
+
+/*-----PLAYER-----*/
+#PLAYER {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} 
+
+#PLAYER img{
+    width: 100px;
+    /*  background-color: blue;  */
+    animation: jumps 0.7s infinite alternate;
+} 
+
+
+
+/*-----Choices-----*/
+.choice-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 120px;
+    height: 120px;  
+   
+    
+}
+
+
+
+.choice-palyer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* font-size: 40px; */
+    filter: blur(1px);
+    animation: jumps 0.2s infinite alternate;
+}
+
+
+.choice-com {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* font-size: 40px; */
+    filter: blur(1px);
+    animation: jumps 0.2s infinite alternate;
+}
+
+
+.hand{
+    width: 40px;
+}
+
+
+
+
+
+
+
+/*-----Controles - Choices-----*/
+.control{
+    display: flex;
+    /* background-color: blue; */
+    width: 400px;
+    justify-content: space-between;
+    margin-top: 4px;
+    gap: 4px;
+}
+          
+.buttons{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+            
+.buttons button {
+    font-size: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+}
+.buttons button:hover{
+    transform: translateX(-2px) translateY(-2px);
+}
+
+.buttons button img{
+    width: 20px;
+}
+
+
+.result {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(21, 21, 21);
+    border-left-color:rgb(73, 73, 73) ;
+    border-top-color: rgb(73, 72, 72);
+    background-color: rgb(0, 157, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/*-----Responsividade-----*/
+@media screen and (max-width: 700px) {
+    body {
+        scale:0.8;
+        
+
+    }
+
+    /* .container {
+        opacity: 0;
+    } */
+} 
+
+@media screen and (max-width: 550px) {
+    body {
+        scale:0.7;
+        
+
+    }
+
+    .buttons{
+        gap: 10px;
+    }
+    
+                
+    .buttons button {
+        width: 40px;
+        height: 40px;
+    }
+} 
+
+@media screen and (max-width: 400px) {
+    body {
+        scale:0.6;
+        
+
+    }
+
+    /* .container {
+        opacity: 0;
+    } */
+} 
