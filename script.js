@@ -6,19 +6,15 @@ const handComputer = document.querySelector('.choice-com');
 /* const playerChar = document.querySelector('#PLAYER'); */
 const hpCOM = document.querySelector('#hp-COM'); 
 const hpPlayer = document.querySelector('#hp-player');
-const xLose = document.querySelector('.lose');
+/* const xLose = document.querySelector('.lose'); */
 
 let humanPoint = 0;
 let machinePoint = 0;
 
 const playHuman = (choice) => {
-    const handPlayer = document.querySelector('.choice-palyer')
+   const handPlayer = document.querySelector('.choice-palyer')
 
    document.querySelector('.choice-container').style = "display:flex;"
-
-
-
-    hand(choice, playCOM())
 
 
     playTheGame(choice, playCOM())
@@ -29,12 +25,15 @@ const playHuman = (choice) => {
 const playCOM = () => {
     const choices = ['rock', 'paper', 'scissors'];
     let machineChoice = Math.floor(Math.random() * (2 - 0 + 1) + 0);
-    /* console.log(choices[machineChoice]); */
+
+    console.log('machine: ' + choices[machineChoice]); 
     return choices[machineChoice]
 }
 
 /* Define quem ganha ou perde a partida */
 const playTheGame = (human, machine) => {
+    hand(human, machine)
+
     if ((human === 'rock' && machine === 'scissors') || (human === 'scissors' && machine === 'paper') || (human === 'paper' && machine === 'rock')) {
         console.log('Você venceu')
         humanPoint++;
