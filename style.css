@@ -20,7 +20,40 @@ body {
     background-size:contain ;
 }
 
+#capa{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(0, 157, 255), rgb(0, 159, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#capa .start {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: rgb(21, 160, 253);
+    cursor: pointer;
+}
+
 h1 {
+    background: linear-gradient(rgb(0, 157, 255), rgb(0, 159, 0));
+    width: 250px;
+    border: 2px solid rgb(21, 21, 21);
+    border-left-color:rgb(73, 73, 73) ;
+    border-top-color: rgb(73, 72, 72);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+h2 {
     background: linear-gradient(rgb(0, 157, 255), rgb(0, 159, 0));
     width: 250px;
     border: 2px solid rgb(21, 21, 21);

@@ -8,6 +8,14 @@ const hpCOM = document.querySelector('#hp-COM');
 const hpPlayer = document.querySelector('#hp-player');
 /* const xLose = document.querySelector('.lose'); */
 
+
+const capa = document.querySelector('#capa');
+const start = document.querySelector('.start');
+start.addEventListener('click', () => {
+    capa.style.display = 'none'
+})
+
+
 let humanPoint = 0;
 let machinePoint = 0;
 
